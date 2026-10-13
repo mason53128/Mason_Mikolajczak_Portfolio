@@ -4,7 +4,35 @@ import { ArrowRight, Download } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const skills = [
-    
+    "Java",
+    "Python",
+    "C",
+    "C#",
+    "SQL",
+    "R",
+    "JavaScript",
+    "Lua",
+    "HTML",
+    "CSS",
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JUnit",
+    "WordPress",
+    "Git",
+    "GitHub",
+    "VS Code",
+    "PyCharm",
+    "Eclipse",
+    "IntelliJ",
+    "RStudio",
+    "pandas",
+    "NumPy",
+    "Matplotlib",
+    "Discord.py",
+    "shiny",
+    "Django"
 ]
 
 export const Hero = () => {
