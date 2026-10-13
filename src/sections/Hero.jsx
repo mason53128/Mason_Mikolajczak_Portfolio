@@ -33,55 +33,55 @@ export const Hero = () => {
         {/* Content */}
         <div className = "container mx-auto px-6 pt-32 pb-20 relative z-10">
             <div className = "grid lg:grid-cols-2 gap-12 items-center">
-                {/*Left Column - Text Conent*/}
-                <div className = "space-y-8">
+                {/*Left Column - Text Content*/}
+                <div className="space-y-8">
                     <div className="animate-fade-in">
-                        <span className = "inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
-                        <span className = "w-2 h-2 bg-primary rounded-full animate-pulse"/>
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                             Data Science Student
                         </span>
                     </div>
-                </div>
 
-                {/*Headline*/}
-                <div className = "space-y-4">
-                    <h1 className = "text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animate-delay-100">
-                        Crafting <span className = "text-primary glow-text">Data-Driven</span> 
-                        <br />
-                        Solutions with 
-                        <br />
-                        <span className = "font-serif italic font-normal text-white">percision</span> 
-                    </h1>
-                    <p className = "text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
-                        Hello! I'm Mason Mikolajczak, a passionate Data Science student dedicated to transforming complex data into actionable insights. 
-                        With a strong foundation in statistical analysis, machine learning, and data visualization, 
-                        I thrive on solving real-world problems through data-driven solutions. 
-                        My journey in data science is fueled by curiosity and a commitment to continuous learning, 
-                        as I explore innovative ways to leverage data for impactful decision-making.
-                    </p>
-                </div>
-                {/*CTA Buttons*/}
-                <div className = "flex flex-wrap gap-4 animate-fade-in animate-delay-300">
-                    <Button size="lg">Contact Me<ArrowRight className="w-5 h-5"/></Button>
-                    <AnimatedBorderButton>
-                    <Download className="w-5 h-5" />
-                    Download CV
-                    </AnimatedBorderButton>
-                </div>
-                
-                {/*Social Links */}
-                <div className = "flex items-center gap-4 animate-fade-in animate-delay-400">
-                    <span className = "text-sm text-muted-foreground">Follow me: </span>
-                    {[
-                    {icon: FaGithub, label: "GitHub", href: "https://github.com/mason53128"},
-                    {icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mason-mikolajczak-87172a263/"},
-                    {icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/the_mase1/"}
+                    {/*Headline*/}
+                    <div className="space-y-4">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animate-delay-100">
+                            Crafting <span className="text-primary glow-text">Data-Driven</span>
+                            <br />
+                            Solutions with
+                            <br />
+                            <span className="font-serif italic font-normal text-white">percision</span>
+                        </h1>
+                        <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
+                            Hello! I'm Mason Mikolajczak, a passionate Data Science student dedicated to transforming complex data into actionable insights.
+                            With a strong foundation in statistical analysis, machine learning, and data visualization,
+                            I thrive on solving real-world problems through data-driven solutions.
+                            My journey in data science is fueled by curiosity and a commitment to continuous learning,
+                            as I explore innovative ways to leverage data for impactful decision-making.
+                        </p>
+                    </div>
 
-                    ].map((social, idx) => (
-                        <a key = {idx} href = {social.href} aria-label={social.label} className = "p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                            <social.icon className = "w-5 h-5" />
-                        </a>
-                    ))}
+                    {/*CTA Buttons*/}
+                    <div className="flex flex-wrap gap-4 animate-fade-in animate-delay-300">
+                        <Button size="lg">Contact Me<ArrowRight className="w-5 h-5" /></Button>
+                        <AnimatedBorderButton>
+                            <Download className="w-5 h-5" />
+                            Download CV
+                        </AnimatedBorderButton>
+                    </div>
+
+                    {/*Social Links*/}
+                    <div className="flex items-center gap-4 animate-fade-in animate-delay-400">
+                        <span className="text-sm text-muted-foreground">Follow me: </span>
+                        {[
+                            { icon: FaGithub, label: "GitHub", href: "https://github.com/mason53128" },
+                            { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mason-mikolajczak-87172a263/" },
+                            { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/the_mase1/" }
+                        ].map((social, idx) => (
+                            <a key={idx} href={social.href} aria-label={social.label} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                                <social.icon className="w-5 h-5" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 {/*Right Column - Image*/}
