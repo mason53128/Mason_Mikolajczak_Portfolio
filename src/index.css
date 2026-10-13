@@ -45,24 +45,26 @@
     backdrop-filter: blur(18px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
+
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
+
   .glow-text {
     text-shadow: 0 0 30px
       color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
+
   .glow-border {
     box-shadow: 0 0 20px
         color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
-};
+}
 
 @layer utilities {
-
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -102,6 +104,15 @@
     }
   }
 
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
   }
@@ -109,47 +120,60 @@
   .animate-float {
     animation: float 4s ease-in-out infinite;
   }
-  .animate-delay-100{
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-delay-100 {
     animation-delay: 100ms;
   }
-  .animate-delay-200{
+
+  .animate-delay-200 {
     animation-delay: 200ms;
   }
-  .animate-delay-300{
+
+  .animate-delay-300 {
     animation-delay: 300ms;
   }
-  .animate-delay-400{
+
+  .animate-delay-400 {
     animation-delay: 400ms;
   }
-  .animate-delay-500{
+
+  .animate-delay-500 {
     animation-delay: 500ms;
   }
-  .animate-delay-600{
+
+  .animate-delay-600 {
     animation-delay: 600ms;
   }
-  .animate-delay-700{
+
+  .animate-delay-700 {
     animation-delay: 700ms;
   }
-  .animate-delay-800{
+
+  .animate-delay-800 {
     animation-delay: 800ms;
   }
 }
 
 @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
+  0% {
+    stroke-dashoffset: 400;
   }
 
-  .group:hover .animated-border-path {
-    animation: animated-border 1.5s linear infinite;
+  100% {
+    stroke-dashoffset: -550;
   }
+}
 
-  .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-  }
+.group:hover .animated-border-path {
+  animation: animated-border 1.5s linear infinite;
+}
+
+.animated-border:hover {
+  background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+}
